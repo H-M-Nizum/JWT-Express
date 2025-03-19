@@ -1,7 +1,8 @@
 const express = require("express");
+const checkLogin = require("../middlewares/checklogin");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", checkLogin, (req, res) => {
   res.send({ success: true, message: "Hello, Express!" });
 });
 
