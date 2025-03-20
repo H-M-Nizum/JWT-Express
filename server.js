@@ -3,6 +3,7 @@ const connectDB = require("./config");
 require("dotenv").config();
 const rootRouter = require("./routes/rootRoute");
 const userRouter = require("./routes/userRouter");
+const fileUploadRouter = require("./routes/fileUpload");
 const logger = require("./middlewares/logger");
 const globalErrorHandeler = require("./middlewares/global-error-handeler");
 const cors = require("cors");
@@ -39,6 +40,7 @@ app.use(globalErrorHandeler);
 // Application Routes
 app.use("/", rootRouter);
 app.use("/user", userRouter);
+app.use("/file", fileUploadRouter);
 
 // Start Server
 app.listen(PORT, () => {
