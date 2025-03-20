@@ -1,0 +1,22 @@
+=============1. Body-perser
+❓ Express.js-এ body-parser কেন দরকার?
+✅ উত্তর:
+Express.js নিজে শুধুমাত্র raw HTTP request handle করতে পারে, কিন্তু request body থেকে 
+JSON বা form-data extract করতে পারে না। 
+body-parser middleware এটি সহজ করে দেয় এবং req.body থেকে data এক্সেস করতে দেয়।
+
+❓ express.json() এবং express.urlencoded() এর মধ্যে পার্থক্য কী?
+✅ উত্তর:
+
+express.json(): শুধুমাত্র JSON data handle করে।
+express.urlencoded(): x-www-form-urlencoded ফরম্যাটের form-data handle করে।
+
+❓ extended: true vs extended: false এর মধ্যে পার্থক্য কী?
+✅ উত্তর:
+
+extended: true: Complex nested object handle করতে পারে।
+extended: false: Simple key-value pair handle করে।
+
+❓ Express.js-এ body-parser কি এখনও দরকার?
+✅ উত্তর:
+Express.js v4.16.0 থেকে body-parser বিল্ট-ইন হয়ে গেছে, তাই express.json() এবং express.urlencoded() ব্যবহার করলেই চলে।
